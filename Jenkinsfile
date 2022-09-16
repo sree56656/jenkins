@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'python3 jenkins.py'
+                sh 'python --version'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'python3 jenkins.py'
             }
         }
         stage('Deploy') {
